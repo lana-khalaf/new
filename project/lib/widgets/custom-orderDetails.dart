@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:project/Models/order-details.dart';
+import 'package:project/Models/order-details-model.dart';
 
 class OrderdetailsWidget extends StatelessWidget {
-  const OrderdetailsWidget({super.key,  required this.index, required this.orderDetails});
-final OrderDetails orderDetails;
-final int index;
+  const OrderdetailsWidget({super.key, required this.orderDetailsModel});
+final OrdersDetailsModel orderDetailsModel;
+
   @override
   Widget build(BuildContext context) {
     return  Row(
@@ -13,7 +13,7 @@ final int index;
                   Padding(
                     padding: EdgeInsets.only(left: 14),
                     child: Text(
-                      orderDetails.productName[index],
+                      orderDetailsModel.tradeName,
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 22,
@@ -22,14 +22,14 @@ final int index;
                   ),
                   Padding(
                     padding: EdgeInsets.only(left: 200, right: 10),
-                    child: Text("×",
+                    child: Text("\×",
                      style: TextStyle(
                         color: Colors.black,
                         fontSize: 22,
                       ),
                     ),
                   ),
-                  Text(orderDetails.productNum[index],
+                  Text(orderDetailsModel.quantitiy.toString(),
                      style: TextStyle(
                         color: Colors.black,
                         fontSize: 22,
