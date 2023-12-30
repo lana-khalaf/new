@@ -5,6 +5,7 @@ class CustomTextField extends StatelessWidget {
 String? hintText;
 IconData icon;
 IconData? suffixIcon;
+
   @override
   Widget build(BuildContext context) {
     return  TextField(

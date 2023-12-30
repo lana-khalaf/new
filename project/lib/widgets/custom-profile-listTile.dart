@@ -2,9 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ProfileInfo extends StatelessWidget {
-   ProfileInfo({super.key,required this.icon,required this.subtitle,required this.title});
+   ProfileInfo({super.key,required this.validate,required this.controller,required this.icon,required this.subtitle,required this.title});
   String title;
- 
+   TextEditingController controller;
+   Function(String)? validate;
   String subtitle;
 IconData icon;
   @override
